@@ -12,6 +12,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: jdbc:postgresql://fin-server.postgres.database.azure.com:5432/fin-database
+      DATABASE_USERNAME: ukxenuufgx
+      DATABASE_PASSWORD: upGjriApSrO$MO8e
+      FRONTEND_URL: https://finsight27.netlify.app
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -60,4 +65,5 @@ jobs:
           app-name: 'finsight27'
           slot-name: 'Production'
           package: '*.jar'
+
           
